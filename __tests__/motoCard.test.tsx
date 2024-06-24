@@ -1,5 +1,5 @@
-/* eslint-disable no-undef */
 import { render, screen } from "@testing-library/react";
+import { useRouter } from "next/navigation";
 
 import Card from "@/common/components/Motorcycle/Card";
 
@@ -26,7 +26,15 @@ const mockedData = {
   variantId: "1",
 };
 
+jest.mock("next/navigation", () => ({
+  useRouter: jest.fn(),
+  usePathname: jest.fn(),
+  useSearchParams: jest.fn(),
+}));
+
 describe("Card", () => {
+  (useRouter as jest.Mock).mockReturnValue({ query: {} });
+
   it("renders a card", () => {
     render(<Card {...mockedData} />);
 
