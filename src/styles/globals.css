@@ -1,0 +1,13 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+  
+  @import url('https://fonts.cdnfonts.com/css/sf-ui-display');
+
+  img,
+  video {
+    max-width: fit-content;
+    height: revert-layer;
+  }
+  
+  /* * { border: 1px solid rgb(235, 136, 136); } */
