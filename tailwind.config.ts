@@ -18,19 +18,27 @@ const config = {
       },
     },
     extend: {
-      keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
+      colors: {
+        primary: "#180A2A",
+        secondary: "#903DF7",
+        terciary: "#ECDFFD",
+        gray: {
+          primary: "#626262",
+          secondary: "#9A9A9A",
         },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
+        disabled: "#ECDFFD",
+        background: "#FFFFFF",
       },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
+      fontFamily: {
+        sans: ["SF UI Display", "sans-serif"],
+      },
+      fontSize: {
+        h4: "25px",
+        h5: "18px",
+        h6: "16px",
+        p: "16px",
+        title: "13px",
+        small: "10px",
       },
     },
   },
