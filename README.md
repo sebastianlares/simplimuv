@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SmipliMuv
 
-## Getting Started
+Este proyecto es una aplicación web moderna construida con Next.js 14, aprovechando las últimas características como los Server Components para mejorar el rendimiento y la experiencia del usuario. Se utiliza Storybook para desarrollar y probar componentes UI de forma aislada, ESLint para mantener la calidad del código, Tailwind CSS para el diseño rápido y responsivo, y Docker para asegurar un entorno de desarrollo y despliegue consistente. Además, se integran pruebas automatizadas y workflows de GitHub para automatizar la integración y despliegue continuo.
 
-First, run the development server:
+## Características Principales
+
+- **Next.js 14 con Server Components**: Utiliza la última versión de Next.js para aprovechar los Server Components, mejorando el rendimiento al reducir el JavaScript enviado al cliente.
+
+- **Storybook**: Configurado para desarrollar y probar componentes de UI de manera aislada, facilitando la construcción de interfaces consistentes y reutilizables.
+
+- **ESLint**: Configuración personalizada de ESLint para asegurar un código limpio y seguir las mejores prácticas de desarrollo.
+
+- **Docker y Docker Compose**: Contenedores Docker configurados para simplificar el desarrollo y despliegue, asegurando un entorno consistente entre los desarrolladores y la producción.
+
+- **Tailwind CSS**: Utiliza Tailwind CSS para un diseño rápido y responsivo, permitiendo construir interfaces de usuario con una experiencia de diseño coherente y mantenible.
+
+- **Jest**: Se utiliza Jest para para pruebas automatizadas, asegurando la calidad y el correcto funcionamiento del código a través de tests unitarios y de integración.
+
+- **Workflows de GitHub**: Workflows configurados para automatizar la integración y despliegue continuo, mejorando la eficiencia del proceso de desarrollo.
+
+## Cómo Empezar
+
+### Requisitos Previos
+
+- Node.js (v18.17.0)
+- Docker y Docker Compose
+
+### Instalación
+
+1. Clona el repositorio:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <url-del-repositorio>
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias: npm install
+Ejecutar en Desarrollo
+Inicia el servidor de desarrollo de Next.js:  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+ npm run dev 
+ ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Para ver los componentes en Storybook:  
 
-## Learn More
+```bash
+npm run  storybook 
+```
 
-To learn more about Next.js, take a look at the following resources:
+- Docker
+Para construir y ejecutar la aplicación usando Docker Compose: 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+docker-compose up --build
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Configuración
+ESLint
+La configuración de ESLint se encuentra en el archivo .eslintrc.json, personalizado para cumplir con las mejores prácticas y estilos de código específicos del proyecto.
 
-## Deploy on Vercel
+Tailwind CSS
+Tailwind CSS está configurado en tailwind.config.js, permitiendo personalizar temas, breakpoints y otras configuraciones para adaptarse a las necesidades del diseño.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Storybook
+Storybook está configurado en la carpeta .storybook, donde puedes ajustar la configuración global, agregar plugins y modificar el comportamiento según sea necesario.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Workflows de GitHub
+Los workflows de GitHub se definen en la carpeta .github/workflows, automatizando pruebas, construcción, y despliegue de la aplicación.
+
+Pruebas
+Las pruebas se encuentran en la carpeta __tests__, donde puedes agregar pruebas unitarias y de integración para tus componentes y páginas.
